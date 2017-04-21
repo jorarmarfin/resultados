@@ -63,7 +63,7 @@
         </tbody>
     </table>
     {!! $Lista->render() !!}
-</div>>
+</div>
 @endif
 @stop
 
