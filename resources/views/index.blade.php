@@ -23,14 +23,67 @@
   <body>
 
     <div class="container">
-
-
-
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h3>RESULTADOS DE CEPRE UNI 2017-2</h3>
-
+        <h3>MODULO DE RESULTADOS</h3>
       </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Concurso de Admisión</h3>
+            </div>
+            <div class="panel-body">
+              <a href="{{ route('resultados.cepre') }}" class="btn btn-info"> Resultados</a>
+            </div>
+          </div>
+        </div><!--span-->
+        <div class="col-md-4">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Cepre UNI</h3>
+            </div>
+            <div class="panel-body">
+            <a href="{{ route('resultados.cepre') }}" class="btn btn-info"> Resultados</a>
+            </div>
+          </div>
+        </div><!--span-->
+        <div class="col-md-4">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title">Simulacro</h3>
+            </div>
+            <div class="panel-body">
+              <a href="{{ route('resultados.cepre') }}" class="btn btn-info"> Resultados</a>
+            </div>
+          </div>
+        </div><!--span-->
+      </div><!--row-->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ingreso Directo Escolar</h3>
+            </div>
+            <div class="panel-body">
+              <a href="{{ route('resultados.cepre') }}" class="btn btn-info"> Resultados</a>
+            </div>
+          </div>
+        </div><!--span-->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title">Activar</h3>
+            </div>
+            <div class="panel-body">
+            {!! Alert::render() !!}
+              <a href="{{ route('resultados.activar',1) }}" class="btn btn-info"> Activar</a>
+              <a href="{{ route('resultados.activar',0) }}" class="btn btn-danger"> Desactivar</a>
+            </div>
+          </div>
+        </div><!--span-->
+      </div><!--row-->
 
     </div> <!-- /container -->
 
