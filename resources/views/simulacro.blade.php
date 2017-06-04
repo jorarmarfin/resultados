@@ -26,14 +26,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach ($Lista as $item)
-                    <tr >
-                        <td> {{ $item->codigo }} </td>
-                        <td> {{ $item->nombre_completo }} </td>
-                        <td> {{ $item->ver_puntaje }} </td>
-                        <td> {{ $item->ver_nota }} </td>
+                    <tr>
+                        <td> {{ $Lista->codigo }} </td>
+                        <td> {{ $Lista->nombre_completo }} </td>
+                        <td> {{ $Lista->ver_puntaje }} </td>
+                        <td> {{ $Lista->ver_nota }} </td>
                     </tr>
-                @endforeach
                 </tbody>
             </table>
         @endif
