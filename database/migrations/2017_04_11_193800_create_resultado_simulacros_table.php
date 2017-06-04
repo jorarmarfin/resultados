@@ -26,6 +26,12 @@ class CreateResultadoSimulacrosTable extends Migration
             $table->integer('merito')->nullable();
             $table->integer('merito_sede')->nullable();
             $table->boolean('asistio')->nullable();
+            $table->string('materia_1',50)->nullable();
+            $table->string('nivel_1',50)->nullable();
+            $table->string('materia_2',50)->nullable();
+            $table->string('nivel_2',50)->nullable();
+            $table->string('materia_3',50)->nullable();
+            $table->string('nivel_3',50)->nullable();
             $table->mediumtext('observacion')->nullable();
             $table->timestamps();
         });

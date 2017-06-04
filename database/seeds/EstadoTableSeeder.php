@@ -1,8 +1,10 @@
 <?php
 
+use App\EstadoResultados;
+use App\ResultadoCepre;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class EstadoTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(EstadoTableSeeder::class);
-        //$this->call(ResultadoCepreTableSeeder::class);
+    	EstadoResultados::create(['activo'=>1]);
     }
 }

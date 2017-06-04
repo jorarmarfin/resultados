@@ -54,7 +54,7 @@
               <h3 class="panel-title">Simulacro</h3>
             </div>
             <div class="panel-body">
-              <a href="{{ route('resultados.cepre') }}" class="btn btn-info"> Resultados</a>
+              <a href="{{ route('resultados.simulacro') }}" class="btn btn-info"> Resultados</a>
             </div>
           </div>
         </div><!--span-->
