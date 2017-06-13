@@ -14,7 +14,7 @@
         {!! Form::close() !!}
         <p></p>
         <a href="{{ route('resultados.simulacro.quinto') }}" class="btn btn-warning">Resultados de Quinto Año</a>
-        <a href="{{ route('resultados.simulacro.quinto') }}" class="btn btn-info">Resultados de Quinto Año y egresados</a>
+        <a href="{{ route('resultados.simulacro.otros') }}" class="btn btn-info">Resultados de Quinto Año y egresados</a>
         <p></p>
         @if(isset($Lista))
 
@@ -23,7 +23,6 @@
                 <thead>
                     <tr class="info">
                         <th> Codigo </th>
-                        <th> Nombres  </th>
                         <th> Grado </th>
                         <th> Puntaje </th>
                         <th> Nota  </th>
@@ -32,17 +31,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($Lista as $item)
                     <tr>
-                        <td> {{ $Lista->codigo }} </td>
-                        <td> {{ $Lista->nombre_completo }} </td>
-                        <td> {{ $Lista->grado }} </td>
-                        <td> {{ $Lista->ver_puntaje }} </td>
-                        <td> {{ $Lista->ver_nota }} </td>
-                        <td> {{ $Lista->especialidad }} </td>
-                        <td> {{ $Lista->merito_especialidad }} </td>
+                        <td> {{ $item->codigo }} </td>
+                        <td> {{ $item->grado }} </td>
+                        <td> {{ $item->ver_puntaje }} </td>
+                        <td> {{ $item->ver_nota }} </td>
+                        <td> {{ $item->especialidad }} </td>
+                        <td> {{ $item->merito_especialidad }} </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
+            {{ $Lista->links() }}
         @endif
     @endif
 @stop

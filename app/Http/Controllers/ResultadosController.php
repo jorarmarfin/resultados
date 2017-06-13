@@ -73,6 +73,24 @@ class ResultadosController extends Controller
         $Lista = ResultadoSimulacro::where('codigo',$data['codigo'])->first();
         return view('simulacro',compact('Lista','resultado'));
     }
+    public function simulacroquinto()
+    {
+        $id = Session::get('ID');
+        if(is_null($id))$resultado = EstadoResultados::first();
+        else $resultado = new EstadoResultados(['activo'=>true]);
+
+        $Lista = ResultadoSimulacro::where('grado','Quinto Año')->paginate();
+        return view('simulacro-lista',compact('Lista','resultado'));
+    }
+    public function simulacrootros()
+    {
+        $id = Session::get('ID');
+        if(is_null($id))$resultado = EstadoResultados::first();
+        else $resultado = new EstadoResultados(['activo'=>true]);
+
+        $Lista = ResultadoSimulacro::whereIn('grado',['Quinto Año','Otro'])->paginate();
+        return view('simulacro-lista',compact('Lista','resultado'));
+    }
     public function admision()
     {
     	return view('admision');

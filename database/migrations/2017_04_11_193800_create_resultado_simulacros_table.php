@@ -21,6 +21,8 @@ class CreateResultadoSimulacrosTable extends Migration
             $table->string('materno',50)->nullable();
             $table->string('nombres',100)->nullable();
             $table->string('sede',100)->nullable();
+            $table->string('especialidad',100)->nullable();
+            $table->string('grado',100)->nullable();
             $table->decimal('puntaje','10','3')->nullable();
             $table->decimal('nota','10','3')->nullable();
             $table->integer('merito')->nullable();
